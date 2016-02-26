@@ -1,0 +1,858 @@
+/*
+
+	CLIMB THE MOUNTAINS by ERSKINE DESIGN
+	VERSION 1.0
+
+	CONTENTS ----------
+
+	   	1.BODY
+	   	2.DEFAULT STYLING
+	   	3.HEADINGS
+	   	4.LINKS
+	   	5.IMAGES
+	   	6.LAYOUT
+	   	7.BRANDING/MASTHEAD
+		8.SITEINFO/FOOTER
+		9.GLOBAL ELEMENTS
+			9.1 CAPTIONED IMAGE
+			9.2 ELEVATION
+			9.3 DISTANCE/ELEVATION PARAGRAPH
+		10.HOMEPAGE
+			10.1 CONTENT PRIMARY
+			10.2 CONTENT SECONDARY
+			10.3 CONTENT TERTIARY
+
+    -------------------
+
+    COLOURS -----------
+
+		blue #278dab
+        green #339900
+
+    -------------------
+
+*/
+
+@import url(reset.css);
+
+/* RESET CSS */
+
+
+/* 1.BODY
+---------------------------------------------------------------------- */
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+/* 2.DEFAULT STYLING
+---------------------------------------------------------------------- */
+
+p,
+ul,
+dl,
+ol {
+    margin-bottom: 18px;
+}
+
+ul {
+    list-style: square;
+}
+
+ul li {
+    margin-left: 15px;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ol li {
+    margin-left: 30px;
+}
+
+hr {
+    height: 0;
+    border: none;
+    background: none;
+    border-top: 1px dotted #ccc;
+}
+
+blockquote {
+    font-family: "Palatino-Roman", "Palatino", "PalatinoLinotype-Roman", "Palatino Linotype", Times, sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+blockquote p {
+    margin-bottom: 12px;
+}
+
+blockquote cite {
+    font-size: 11px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+abbr {
+    border-bottom: 1px dotted #ccc;
+    cursor: help;
+}
+
+del {
+    color: #666;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+table {
+    border-top: 1px solid #ccc;
+}
+
+table a {
+    color: #000;
+}
+
+table a:hover,
+table a:focus {
+    color: #000;
+    text-decoration: underline;
+}
+
+table td {
+    border-bottom: 1px solid #ccc;
+    background: #f4f6de;
+    padding: 5px 0;
+}
+
+table tr.alt td {
+    background: #fff;
+}
+
+
+/* 3.HEADINGS
+---------------------------------------------------------------------- */
+
+h1,
+h2,
+h4,
+h5 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+h2 span {
+    font-weight: normal;
+    color: #339900;
+}
+
+h2 a.more {
+    font-size: 12px;
+    font-weight: normal;
+    color: #666;
+    font-style: italic;
+}
+
+h2 a.more:hover,
+h2 a.more:focus {
+    color: #333;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+h3 a {
+    color: #000;
+}
+
+h3 a:hover,
+h3 a:focus {
+    color: #000;
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* 4.LINKS
+---------------------------------------------------------------------- */
+
+a {
+    color: #278dab;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #186176;
+}
+
+
+/* 5.IMAGES
+---------------------------------------------------------------------- */
+
+img.avatar {
+    border: 2px solid #fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-box-shadow: 1px 1px 5px #999;
+    -moz-box-shadow: 1px 1px 5px #999;
+}
+
+.polaroid {
+    border: 5px solid #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 5px #999;
+    -moz-box-shadow: 1px 1px 5px #999;
+}
+
+
+/* 6.LAYOUT
+---------------------------------------------------------------------- */
+
+div#page {
+    width: 1000px;
+    margin: 0 auto;
+    height: 1000px;
+}
+
+div#content_wrapper {
+    width: 1000px;
+    float: left;
+}
+
+
+/* 7.HAEDER
+---------------------------------------------------------------------- */
+
+header {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #000;
+    margin-bottom: 45px;
+}
+
+header h1 {
+    width: 365px;
+    padding: 20px 0 30px 0;
+}
+
+header h1 a,
+header h1 a:hover {
+    color: black;
+}
+
+header h2 {
+    float: left;
+    width: 365px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #999;
+    line-height: 24px;
+}
+
+#navigation_pri {
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    left: 415px;
+    top: 0px;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    z-index: -1;
+}
+
+#navigation_pri li {
+    float: left;
+    padding: 30px 10px 0 10px;
+    margin: 0;
+    height: 3000px;
+}
+
+#navigation_pri li a {
+    color: black;
+}
+
+#navigation_pri li.nav_home {
+    background-color: #f5f5f5;
+}
+
+#navigation_pri li.nav_home a {
+    color: #278dab;
+    background: #f5f5f5 url(../assets/images/site/nav_back.gif) left center no-repeat;
+    padding-left: 20px;
+}
+
+#account_summary {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 148px;
+    padding: 10px 4px 10px 56px;
+    border: 1px solid #d3e4d3;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    font-size: 12px;
+    font-style: italic;
+    background-color: #e8f9e9;
+}
+
+#account_summary img {
+    position: absolute;
+    left: 7px;
+    top: 9px;
+}
+
+#account_summary p {
+    margin-bottom: 2px;
+    color: #555;
+}
+
+#account_summary p a {
+    text-decoration: underline;
+    color: #555;
+}
+
+#account_summary p.action {
+    color: #999;
+    font-family: Verdana, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#account_summary p.action a {
+    color: #999;
+    text-decoration: none;
+}
+
+#johnmuir {
+    position: relative;
+    float: right;
+    width: 505px;
+    padding: 0 70px 20px 0;
+    background: url(../assets/images/site/branding_johnmuir.jpg) no-repeat right top;
+}
+
+#route_search {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 335px;
+    padding: 9px;
+    background-color: #f4f6de;
+    border: 1px solid #dfe1c9;
+    border-radius: 3px 3px 0 0;
+}
+
+form#route_search h5 {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+form#route_search fieldset label {
+    display: none;
+}
+
+form#route_search input[type="text"] {
+    width: 120px;
+    border: 2px solid #dfe1c9;
+    padding: 3px;
+    margin-right: 7px;
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    color: #666;
+}
+
+form#route_search input[type="submit"] {
+    margin-left: 7px;
+    background: #c8cab6;
+    border: none;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 2px #777;
+}
+
+
+/* 8.CONTENT
+---------------------------------------------------------------------- */
+
+
+/* 8.1 CONTENT PRIMARY ------------ */
+
+#content_pri {
+	overflow: hidden;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px dotted #ccc;
+}
+
+#route_stats {
+    float: left;
+    width: 660px;
+}
+
+ul#route_nav {
+    float: left;
+    list-style: none;
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+	margin: 0;
+}
+
+ul#route_nav li {
+    display: block;
+    float: left;
+    padding: 7px 10px;
+    margin: 0;
+}
+
+ul#route_nav li a {
+	color: #666;
+}
+
+ul#route_nav li.cur {
+	background: #dff1f1;
+	border-radius: 3px 3px 0 0;
+}
+
+ul#route_action {
+    float: right;
+    list-style: none;
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+	margin: 8px 0 0 0;
+}
+
+ul#route_action li {
+    display: block;
+    float: left;
+    margin: 0 0 0 15;
+}
+
+ul#route_action li a {
+	padding-left: 16px;
+	background-position: 0 0;
+	background-repeat:  no-repeat;
+	color: #666;
+}
+
+ul#route_action li.share a {
+	background-image: url(../assets/images/site/icon_share.gif);
+}
+
+ul#route_action li.print a {
+	background-image: url(../assets/images/site/icon_print.gif);
+}
+
+ul#route_action li.edit a {
+	background-image: url(../assets/images/site/icon_edit.gif);
+}
+
+#route_elevation {
+	clear: both;
+	background: #dff1f1 url(../assets/images/site/elevation_home.gif) 0 bottom no-repeat;
+	position: relative;
+	height: 195px;
+}
+
+#route_elevation ul {
+	list-style: none;
+	margin: 0;
+	font-family: Verdana, sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+}
+
+#route_elevation ul li {
+	position: absolute;
+	margin: 0;
+}
+
+li.marker_01 {
+	top: 123px;
+	left: 97px;
+}
+li.marker_02 {
+	top: 50px;
+	left: 237px;
+}
+li.marker_03 {
+	top: 95px;
+	left: 377px;
+}
+li.marker_04 {
+	top: 137px;
+	left: 517px;
+}
+
+#route_elevation ul li a {
+	color: #333;
+	display: block;
+	background: url(../assets/images/site/elevation_marker.png) 0 5px no-repeat;
+	padding: 0 0 0 15px;
+}
+
+#route_elevation ul li a img {
+	display: none;
+}
+
+#route_elevation ul li a:hover img {
+	display: block;
+	width: 40px;
+	height: 40px;
+	padding: 4px 9px 10px 12px;
+	position: absolute;
+	top: -16px;
+	right: -65px;
+	background: url(../assets/images/site/elevation_marker_image_bg.png) 0 0 no-repeat;
+}
+
+.captioned_image {
+    float: right;
+    width: 310px;
+    margin: 32px 0 0 0;
+    position: relative;
+}
+
+.captioned_image p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 13px;
+    line-height: 16px;
+    font-style: italic;
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+/* 8.2 CONTENT SECONDARY ------------ */
+
+#content_sec {
+	overflow: hidden;
+    padding-bottom: 30px;
+}
+
+#your_routes {
+	float: left;
+	margin: 0 20px 0 0;
+	width: 320px;
+}
+
+#your_routes h2 {
+	margin-bottom: 20px;
+}
+
+#your_routes ul {
+	margin-bottom: 20px;
+	background-color: #eee;
+	list-style: none;
+	border-top: 1px solid #ddd;
+}
+
+#your_routes ul li {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 10px 10px 10px 84px;
+	border-bottom: 1px solid #ddd;
+	background: url(../assets/images/site/routes_latest_grad.gif) 0 bottom repeat-x;
+	height: 48.6px;
+}
+
+#your_routes ul li h3 {
+	margin: 0 0 5px 0;
+	font-size: 16px;
+}
+
+#your_routes ul li p {
+	margin: 0;
+	font-family: Verdana,sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+	color: #339900;
+}
+
+#your_routes ul li a img {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	border: 2px solid #ccc;
+}
+
+#your_routes p a {
+	padding: 5px 5px 5px 20px;
+	background: #339900 url(../assets/images/site/icon_add.gif) 5px center no-repeat;
+	color: #fff;
+	text-shadow: 1px 1px 2px #666;
+	font-family: Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	border-radius: 3px;
+}
+
+#your_recommended {
+	width: 320px;
+	float: left;
+}
+
+#your_recommended img {
+	border: 5px solid #ccc;
+	margin: 0 0 10px 0;
+}
+
+#your_recommended p {
+	margin-bottom: 10px;
+}
+
+#your_recommended p.dist_elev {
+	font-family: Verdana,sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+	color: #339900;
+}
+
+#others_routes {
+	width: 320px;
+	float: right;
+}
+
+#others_routes ul {
+	background: #ffffcc;
+	padding: 10px;
+	border: 1px solid #dedeaf;
+	border-radius: 5px;
+	margin: 0;
+	list-style: none;
+}
+
+#others_routes ul li {
+	border-bottom: 1px solid #dedeaf;
+	padding: 10px 55px 10px 0;
+	margin: 0;
+	position: relative;
+}
+
+#others_routes ul li h3 {
+	margin-bottom: 5px;
+}
+
+#others_routes p.dist_elev {
+	font-family: Verdana,sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+	color: #339900;
+	margin: 0 0 5px 0;
+}
+
+#others_routes p.username {
+	margin: 3px 0 0 0;
+	font-style: italic;
+	font-size: 12px;
+}
+
+#others_routes p.username a {
+	color: #666;
+}
+
+#others_routes p.username a img {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#others_routes ul li:first-child {
+	padding-top: 0px;
+}
+
+#others_routes ul li:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+/* 8.3 CONTENT TERTIARY ------------ */
+
+#content_ter {
+	float: left;
+    padding: 30px 0 30px 30px;
+    border: 1px dotted #ccc;
+    border-right: none;
+    margin-left: -30px;
+    position: relative;
+    width: 1000px;
+}
+
+#content_ter h2 {
+	position: absolute;
+	top: 105px;
+	left: -8px;
+	width: 10px;
+	height: 83px;
+	text-indent: -9999px;
+	background: #fff url(../assets/images/site/community_home_h2.gif) center center no-repeat;
+	padding: 3px;
+}
+
+#community_forums {
+	width: 485px;
+	float: left;
+}
+
+#community_flickr {
+	width: 450px;
+	float: right;
+}
+
+#community_forums h4 {
+	margin-bottom: 20px;
+}
+
+#community_forums table {
+	width: 485px;
+}
+
+td.user a {
+	font-style: italic;
+	color: #339900;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+td.date {
+	font-family: Verdana,sans-serif;
+	font-weight: bold;
+	text-align: center;
+	font-size: 10px;
+	color: #666;
+}
+
+#community_flickr h4 {
+	margin-bottom: 20px;
+}
+#community_flickr h4 span {
+	color: #d81ac4;
+}
+
+#community_flickr ul {
+	list-style: none;
+	margin: 0 -15px 0 0;
+}
+
+#community_flickr ul li {
+	float: left;
+	margin: 0 15px 15px 0;
+	border: 4px solid #fff;
+	border-radius: 2px;
+	box-shadow: 1px 1px 5px #999;
+}
+
+/* 9.SITEINFO/FOOTER
+---------------------------------------------------------------------- */
+
+footer {
+	padding: 45px 0 0 0;
+	clear: both;
+	font-family: Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	position: relative;
+}
+
+footer ul {
+	overflow: hidden;
+	list-style: none;
+	margin: 0 0 15px 0;
+}
+
+footer ul li {
+	float: left;
+	margin: 0;
+	padding-right: 10px;
+}
+
+footer ul li:first-child a {
+	color: #000;
+}
+
+footer #siteinfo_copyright {
+	color: #999;
+	font-size: 11px;
+}
+
+#siteinfo_copyright a {
+	color: #999;
+}
+
+footer #siteinfo_disclaimer {
+	position: absolute;
+	top: 41px;
+	right: 0;
+	width: 260px;
+	font-size: 10px;
+	color: #B0B0B0;
+	padding: 0 60px 0 0;
+}
+
+#siteinfo_disclaimer a.erskine {
+	display: block;
+	width: 55px;
+	height: 50px;
+	text-indent: -9999px;
+	float: right;
+	background: url(../assets/images/site/siteinfo_erskine_link.gif) 0 0 no-repeat;
+	position: absolute;
+	top: 3px;
+	right: 0;
+}
+
+#siteinfo_disclaimer a.erskine:hover {
+	background-position: 0 -50px;
+}
